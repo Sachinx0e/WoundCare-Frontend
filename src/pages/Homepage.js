@@ -50,7 +50,7 @@ class Homepage extends Component {
 
     getPatients = () => {
         var patients  = []
-        for(var i =0;i<3;i++){
+        for(var i =0;i<4;i++){
             patients.push(i)
         }
         return patients;
@@ -115,6 +115,7 @@ const styles = StyleSheet.create({
     page : {
         display: "flex",
         flexDirection: "column",
+        height: "100vh"
     },
     
     appointmentsOverviewContainer: {
@@ -122,7 +123,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         marginTop: 20,
         marginLeft: 50,
-        marginRight: 50
+        marginRight: 50,
+        marginBottom: 30
     },
 
     patientLabelContainer : {
@@ -161,12 +163,11 @@ const styles = StyleSheet.create({
     },
 
     patientContainer: {
-        display: "flex",
-        flexDirection: "column",
+        display: "inline-block",
         marginTop: 20,
         marginLeft: 10,
         marginRight: 10,
-        height: 450,
+        flex: 1,
         overflowY: "auto"
     },
 
@@ -174,8 +175,7 @@ const styles = StyleSheet.create({
         display : "flex",
         flexDirection: "row",
         justifyContent: "space-around",
-        marginBottom: 20,
-        paddingBottom: 20
+        marginBottom: 15,
     },
 
     patientItem: {

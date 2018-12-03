@@ -17,7 +17,7 @@ class Navbar extends Component {
                         </div>
                     </div>
 
-                    <div id="home" className={css(styles.headerItem)}>
+                    <a id="home" className={css(styles.headerItem)} href="/" >
                        
                        <div style={{height:5}}/>
 
@@ -26,7 +26,7 @@ class Navbar extends Component {
                         </div>
                         
                         <div className={css(this.getHeaderSelectioIndicatorCss(0))} />
-                    </div>
+                    </a>
 
                     <div id="Appointments" className={css(styles.headerItem)}>
                        
@@ -128,6 +128,7 @@ const styles = StyleSheet.create({
         height: "100%",
         paddingLeft: 5,
         paddingRight: 5,
+        textDecoration: "none",
         ":hover" : {
             cursor: "pointer",
             backgroundColor:"#ececf261"

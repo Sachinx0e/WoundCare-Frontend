@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         "background-image": "url('images/welcome_background.png')",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "auto 100% "
+        backgroundSize: "cover"
     },
 
     welcomeContent: {
@@ -188,7 +188,8 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         letterSpacing: 1,
         "-webkit-font-smoothing": "auto",
-        "-moz-osx-font-smoothing": "auto"
+        "-moz-osx-font-smoothing": "auto",
+        textAlign: "center"
     },
 
     header : {

@@ -25,7 +25,7 @@ class Navbar extends Component {
                             HOME
                         </div>
                         
-                        <div className={css(styles.headerSelectionBar)} />
+                        <div className={css(this.getHeaderSelectioIndicatorCss(0))} />
                     </div>
 
                     <div id="Appointments" className={css(styles.headerItem)}>
@@ -36,7 +36,7 @@ class Navbar extends Component {
                            APPOINTMENTS
                        </div>
                        
-                       <div className={css(styles.headerSelectionBar)} >
+                       <div className={ css(this.getHeaderSelectioIndicatorCss(1))} >
 
                        </div>
                    </div>
@@ -48,7 +48,7 @@ class Navbar extends Component {
                            INBOX
                        </div>
                        
-                       <div className={css(styles.headerSelectionBar)} >
+                       <div className={css(this.getHeaderSelectioIndicatorCss(2))} >
 
                        </div>
                    </div>
@@ -72,9 +72,21 @@ class Navbar extends Component {
         );
     }
 
+    getHeaderSelectioIndicatorCss = (index) => {
+        if(this.props.selectedTab === index){
+            return [styles.headerSelectionBar,styles.visible];
+        }else{
+            return [styles.headerSelectionBar]
+        }
+    }
+
 }
 
 export default Navbar;
+
+Navbar.defaultProps = {
+    selectedTab: 0
+}
 
 const styles = StyleSheet.create({   
     header : {
@@ -138,6 +150,10 @@ const styles = StyleSheet.create({
         backgroundColor: "#8288AC",
         marginTop: "auto",
         visibility: "hidden"
+    },
+
+    visible : {
+        visibility : "visible"
     },
 
     profileContainer: {

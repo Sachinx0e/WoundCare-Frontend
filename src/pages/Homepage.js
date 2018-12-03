@@ -3,6 +3,8 @@ import { StyleSheet, css } from 'aphrodite';
 import Navbar from '../components/Navbar';
 import UpcomingAppointments from '../components/UpcomingAppointments';
 import PatientReturnRate from '../components/PatientReturnRate';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDownload, faFileImage } from '@fortawesome/free-solid-svg-icons'
 
 class Homepage extends Component {
 
@@ -98,15 +100,12 @@ class Homepage extends Component {
                     </div>
 
                     
-                    
-                    
                 </div>
 
 
             </div>  
         );
     }
-
 }
 
 export default Homepage;
@@ -242,10 +241,4 @@ const styles = StyleSheet.create({
         backgroundColor: "#d2d2d2ff",
         height: 1
     },
-
-    
-
-
-    
-    
 })

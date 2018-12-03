@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import Calendar from 'react-calendar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClock } from '@fortawesome/free-solid-svg-icons'
 
 class UpcomingAppointments extends Component {
     
@@ -63,11 +65,13 @@ class UpcomingAppointments extends Component {
                     <div className={css(styles.label)} >
                         AGE:  63
                     </div>
+                </div>
 
-                    <div className={css(styles.timeContainer)} >
-
+                <div className={css(styles.timeContainer)} >
+                    <FontAwesomeIcon icon={faClock} className={css(styles.icon)}/>
+                    <div className={css(styles.timeLabel)} >
+                        9:15 AM
                     </div>
-
                 </div>
 
             </div>  
@@ -178,7 +182,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         height: 50,
         ":hover": {
-            backgroundColor: "#eaeaeae8"
+            backgroundColor: "#fafafae8"
         },
         paddingTop: 10,
         paddingBottom: 10,
@@ -209,9 +213,26 @@ const styles = StyleSheet.create({
     },
 
     timeContainer: {
+        display: "flex",
+        flexDirection: "row",
         marginLeft: "auto",
-        marginRight: 20
-    }
+        marginRight: 20,
+        alignItems: "center"
+    },
+
+    timeLabel: {
+        marginLeft: 10
+    },
+
+    icon: {
+        marginLeft: 10,
+        marginRight: 10,
+        color: "#5a5a5aff",
+        ":hover": {
+            cursor: "pointer",
+            color: "#006bcfff"
+        }
+    },
 
     
 })

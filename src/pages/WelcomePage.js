@@ -123,13 +123,13 @@ const styles = StyleSheet.create({
     },
 
     welcomeMessage: {
-        flex: 1,
+        width: 550,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         "background-image": "url('images/welcome_background.png')",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "100%"
+        backgroundSize: "auto 100% "
     },
 
     welcomeContent: {
@@ -182,6 +182,8 @@ const styles = StyleSheet.create({
         margin: "auto",
         color: "white",
         marginTop: 5,
+        paddingLeft: 20,
+        paddingRight: 20,
         marginBottom: 50,
         fontWeight: "bold",
         letterSpacing: 1,

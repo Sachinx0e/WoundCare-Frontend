@@ -140,6 +140,10 @@ class PatientPage extends Component {
                     </ul>
                 </div>
 
+                <div id="spacer" style={{flex: 1}}  >
+
+                </div>
+
                 <div id="appointments_overview_container" className={css(styles.appointmentsOverviewContainer)}>
 
                     <div style={{flex: 10}} >

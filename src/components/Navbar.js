@@ -5,19 +5,22 @@ class Navbar extends Component {
     
     constructor(props) {
         super(props)
+        this.state = {
+            selectedTab : 0
+        }
     }
 
     render() {
         return (
             <div id="header" className={css(styles.header)} >
 
-                    <div id="branding" className={css(styles.headerBrandingItem)}  >
+                    <a id="branding" className={css(styles.headerBrandingItem)} href="/" >
                         <div className={css(styles.headerBrandingLabel)} >
                             WOUNDCARE
                         </div>
-                    </div>
+                    </a>
 
-                    <a id="home" className={css(styles.headerItem)} href="/" >
+                    <a id="home" className={css(styles.headerItem)} href="/home" >
                        
                        <div style={{height:5}}/>
 
@@ -103,6 +106,7 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         alignItems: "center",
         height: "100%",
+        textDecoration: "none",
         marginLeft: 50,
         marginRight: 50,
         ":hover" : {

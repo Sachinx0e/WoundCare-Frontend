@@ -73,7 +73,7 @@ class Homepage extends Component {
 
     renderPatientItem = () => {
         return (
-            <div id="patient_item" className={css(styles.patientItem,styles.card)} >
+            <div id="patient_item" className={css(styles.patientItem,styles.card)} onClick={this.onPatientClick} >
                 <div className={css(styles.patientPic)}>
                     <img src="images/person_1.png" style={{marginLeft: 26,}} />
                 </div>
@@ -106,6 +106,12 @@ class Homepage extends Component {
             </div>  
         );
     }
+
+    onPatientClick = () => {
+        console.log("clicked");
+        this.props.history.push("/patient/" + 1);
+    }
+
 }
 
 export default Homepage;

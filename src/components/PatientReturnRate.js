@@ -22,7 +22,7 @@ class PatientReturnRate extends Component {
 
                 <div className={css(styles.chartContainer)} >
                     <PieChart 
-                            width={400}
+                            width={450}
                             height={300}
                             className={css(styles.chart)}
                             >

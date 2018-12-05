@@ -46,12 +46,17 @@ class UpcomingAppointments extends Component {
         return patients;
     }
 
+    get_person_image = () => {
+        var index =Math.floor(Math.random() * 8);
+        return "images/person_" + index + ".png" ;
+    }
+
     renderPatient = (patient,index) => {
         return (
             <div id="patient_item" className={css(styles.patientItem)} >
 
                 <div className={css(styles.patientPic)}>
-                    <img src="images/person_1.png" style={{marginLeft: 26, width: 30}} />
+                    <img src={this.get_person_image()} style={{marginLeft: 26, width: 30}} />
                 </div>
                 
                 <div className={css(styles.patientInfo)} >

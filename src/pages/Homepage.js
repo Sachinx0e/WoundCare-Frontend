@@ -75,7 +75,7 @@ class Homepage extends Component {
         return (
             <div id="patient_item" className={css(styles.patientItem,styles.card)} onClick={this.onPatientClick} >
                 <div className={css(styles.patientPic)}>
-                    <img src="images/person_1.png" style={{marginLeft: 26,}} />
+                    <img src={this.get_person_image()} style={{marginLeft: 26,}} />
                 </div>
                 
                 <div style={{
@@ -110,6 +110,11 @@ class Homepage extends Component {
     onPatientClick = () => {
         console.log("clicked");
         this.props.history.push("/patient/" + 1);
+    }
+
+    get_person_image = () => {
+        var index =Math.floor(Math.random() * 8);
+        return "images/person_" + index + ".png" ;
     }
 
 }

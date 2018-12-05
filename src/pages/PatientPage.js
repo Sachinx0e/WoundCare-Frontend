@@ -6,6 +6,12 @@ import PatientReturnRate from '../components/PatientReturnRate';
 import { PieChart, Pie, Sector, Cell } from 'recharts';
 
 class PatientPage extends Component {
+
+    get_person_image = () => {
+        var index =Math.floor(Math.random() * 8);
+        return "images/person_" + index + ".png" ;
+    }
+
     render() {
         return (
             <div id="page" className={css(styles.page)} > 
@@ -15,7 +21,7 @@ class PatientPage extends Component {
                     <div id="info" className={css(styles.info)}>
                         <div id="bio" className={css(styles.bio, styles.card)}>
                                 <div className={css(styles.patientPic)}>
-                                    <img src="images/person_1.png" style={{marginLeft: 26,}} />
+                                    <img src={this.get_person_image()} style={{marginLeft: 26,}} />
                                     </div>
                     
                                     <div style={{

@@ -181,7 +181,7 @@ class PatientPage extends Component {
     renderHistoryItem = (entry,index) => {
         var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
         var date = new Date();
-        date.setDate(date.getDate() + index)
+        date.setDate(date.getDate() - index)
         return (
             <li className={css(styles.historyItemContainer, styles.card)}>
                 <div className={css(styles.historyItem)} >
